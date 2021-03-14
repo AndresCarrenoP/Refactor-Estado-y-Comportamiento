@@ -1,8 +1,36 @@
 public class Animal {
-    static String nombre;
-    static int piernas;
-    static String sonido;
-    static String comida;
+    String nombre;
+    int piernas;
+    String sonido;
+    String comida;
+
+    public Animal(){
+        this("serpiente", 0, "sssssss");
+    }
+
+
+    public Animal (String nombre, String sonido){
+        this.nombre = nombre;
+        this.sonido = sonido;
+    }
+
+
+    public Animal (String nombre, int piernas, String sonido){
+        this.nombre = nombre;
+        this.piernas = piernas;
+        this.sonido = sonido;
+    }
+
+
+    public Animal (String nombre, String sonido, String comida){
+        this(nombre, 4, sonido, comida);
+    }
+
+    public Animal (String nombre){
+        this(nombre,"beeeee", "pasto");
+    }
+
+
 
     public Animal (String nombre, int piernas, String sonido, String comida){
         this.nombre = nombre;
@@ -11,15 +39,9 @@ public class Animal {
         this.comida = comida;
     }
 
-    public Animal (int piernas){
-     }
-
-    public Animal (String nombre, String sonido, String comida){
-        this(4);
-    }
 
     public void emitirSonido(){
-        System.out.println("El sonido de " + nombre + " es: " + sonido);
+        System.out.println("el sonido del animal " + nombre + " es: " + sonido);
     }
 
 
